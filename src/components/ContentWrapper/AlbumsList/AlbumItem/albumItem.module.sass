@@ -1,0 +1,39 @@
+@import "../../../_general.sass"
+
+.album
+    display: flex
+    flex-direction: column
+    border-radius: 10px
+    height: 100%
+    justify-content: space-between
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2)
+    padding: 25px
+
+    &:hover
+        .title
+            color: $mainColor
+
+        .count
+            color: $mainColor
+
+.cover
+    align-self: center
+
+.text
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 3px
+
+.title
+    display: flex
+    flex-basis: 70%
+    color: black
+
+.count
+    display: flex
+    flex-basis: 20%
+    justify-content: space-around
+    color: gray
+    align-self: flex-end

@@ -1,0 +1,80 @@
+@import "../../../_general.sass"
+
+.modalPage
+  width: 100vw
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  background: rgba(0, 0, 0, 0.7)
+  position: fixed
+  top: 0
+  left: 0
+  cursor: default
+
+.modalWrapper
+  background-color: $addColor
+  border-radius: 20px
+  padding: 20px
+  position: relative
+  display: flex
+  max-width: 100%
+
+.close
+  position: absolute
+  top: 0
+  right: -30px
+  cursor: pointer
+  color: $addColor
+  font-weight: bold
+  margin: 0
+
+.control
+  transition-duration: .2s
+  opacity: 0
+  background-color: rgba(255, 255, 255, 0.3)
+  color: $addColor
+  position: absolute
+  height: calc(100% - 40px)
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0 10px
+  cursor: pointer
+
+  &__left
+    left: 20px
+
+  &__right
+    right: 20px
+
+  &:hover
+    opacity: 1
+
+@media screen and (orientation: landscape)
+  .modalWrapper
+    img
+      max-height: 80vh
+      width: auto
+
+@media screen and (orientation: portrait)
+  .modalWrapper
+    img
+      max-width: 70vw
+      height: auto
+
+@media (max-width: 480px)
+  .modalWrapper
+    padding: 10px
+
+  .control
+    height: calc(100% - 20px)
+    padding: 0
+    opacity: 1
+    background: none
+
+    &__left
+      left: 10px
+
+    &__right
+      right: 10px
